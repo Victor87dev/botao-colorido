@@ -11,6 +11,10 @@ html, body{
     background: #000;
 }
 
+body{
+    display: flex;
+}
+
 .center{
     display: flex;
     text-align: center;
@@ -24,7 +28,7 @@ html, body{
     background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
 }
 
-button{
+.button{
     height: 70px;
     width: 220px;
     border-radius: 50px;
@@ -92,6 +96,37 @@ button{
 .outer:hover{
     animation: rotate 1.5s linear infinite;
 }
+
+@keyframes rotate{
+
+0%{
+    filter: hue-rotate(0deg);
+
+
+}100%{
+
+    filter: hue-rotate(360deg);
+}
+
+
+}/*@keyframes*/
+
+
+
+@media (max-width:640px){
+
+    .center{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+
+    }
+
+    .outer{
+        margin: 50px 0px;
+    }
+
+}/*@media*/
 
 
 
